@@ -38,7 +38,7 @@ private:
 class IceMan: public Actor {
     
 public:
-    Iceman(StudentWorld* world): Actor(IID_PLAYER, 30, 60, right, 1, 0, 10, world) {
+    IceMan(StudentWorld* world): Actor(IID_PLAYER, 30, 60, right, 1, 0, 10, world) {
         setVisible(true);
     }
     
@@ -54,11 +54,11 @@ public:
     
     int getSonarKits() const;
     
-    void setGoldNuggs(int newGold) { goldNuggs += newGold }
+    void setGoldNuggs(int newGold) { goldNuggs += newGold; }
     
-    void setSonarKits(int newSonar) { SonarKits += newSonar }
+    void setSonarKits(int newSonar) { SonarKits += newSonar; }
     
-    void setWaterStored(int newWater) { WaterStored += newWater }
+    void setWaterStored(int newWater) { WaterStored += newWater; }
     
     
     
