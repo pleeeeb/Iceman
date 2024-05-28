@@ -1,0 +1,61 @@
+{
+  "buildCommand" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : true,
+    "targets" : null
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "16276a215a88dc02827011bfa585280ce7c0ead2fda0cacef9b04929c02aa297"
+    }
+  ],
+  "containerPath" : "/Users/eduardogiles/Documents/GitHub/Iceman/IceMan.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "indexbuild",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx14.4",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/eduardogiles/Documents/GitHub/Iceman/DerivedData/IceMan/Index.noindex/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/eduardogiles/Documents/GitHub/Iceman/DerivedData/IceMan/Index.noindex/Build/Products",
+      "derivedDataPath" : "/Users/eduardogiles/Documents/GitHub/Iceman/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/eduardogiles/Documents/GitHub/Iceman/DerivedData/IceMan/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/eduardogiles/Documents/GitHub/Iceman/DerivedData/IceMan/Index.noindex/PrecompiledHeaders",
+      "indexRegularBuildIntermediatesPath" : "/Users/eduardogiles/Documents/GitHub/Iceman/DerivedData/IceMan/Build/Intermediates.noindex",
+      "indexRegularBuildProductsPath" : "/Users/eduardogiles/Documents/GitHub/Iceman/DerivedData/IceMan/Build/Products",
+      "pchPath" : "/Users/eduardogiles/Documents/GitHub/Iceman/DerivedData/IceMan/Index.noindex/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "NO",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "qos" : "utility",
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
