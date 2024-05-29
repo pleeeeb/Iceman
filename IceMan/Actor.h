@@ -8,45 +8,70 @@ class StudentWorld;
 class Actor: public GraphObject {
 public:
     
-    Actor(int imageID, int startX, int startY, Direction startDirection, float size = 1.0, unsigned int depth = 0, StudentWorld* world): GraphObject(imageID, startX, startY, startDirection, size, depth) {
+    Actor(StudentWorld* world, int imageID, int startX, int startY, Direction startDirection, 
+          float size, unsigned int depth):
+    GraphObject(imageID, startX, startY, startDirection, size, depth) {
         this->world = world;
     };
     
     virtual ~Actor() {};
     
     virtual void doSomething() = 0;
-    
-    //TESTING COMMIT TO MUHAMMAD_S_BRANCH2
 
     
-    virtual StudentWorld* getWorld() {return world;}
+    virtual StudentWorld* getWorld() {
+        return world;
+        }
+    
 // GraphObject(int imageID, int startX, int startY,
 // DIRECTION startDirection, float size = 1.0,
 //unsigned int depth = 0);
 //    void setVisible(bool shouldIDisplay);
 //    void getX() const;
 //    void getY() const;
-//    void moveTo(int x, int y);
+
+    void moveTo(int x, int y);
+    
 //    DIRECTION getDirection() const; // Directions: up, down, left, right
 //    void setDirection(DIRECTION d); // Directions: up, down, left, right
     
 private:
     StudentWorld* world;
-    double healthPoints;
+    bool isAlive;
 };
 
-class IceMan: public Actor {
-    
+
+class Agent : public Actor
+{
 public:
-    IceMan(StudentWorld* world): Actor(IID_PLAYER, 30, 60, right, 1, 0, 10, world) {
+    Agent(StudentWorld* world, int startX, int startY, Direction startDir,
+          int imageID, float size, unsigned int depth, int hitPoints) :
+    Actor(world, imageID, startX, startY, startDir, size, depth) {};
+
+      // Pick up a gold nugget.
+    virtual void addGold() = 0;
+    
+      // How many hit points does this actor have left?
+    unsigned int getHitPoints() const;
+
+    virtual bool annoy(unsigned int amount);
+    virtual bool canPickThingsUp() const;
+private:
+    int hitPoints;
+};
+
+
+class IceMan: public Agent {
+public:
+    IceMan(StudentWorld* world, int startX, int startY) : Agent(world, 30, 60, right, IID_PLAYER, 10, 1, 100) {
         setVisible(true);
     }
     
     virtual void doSomething() override {}
     
-    virtual bool isAlive() {}
+    virtual bool isAlive();
     
-    int setLife() {}
+    int setLife();
     
     int getGoldNuggs() const;
     
